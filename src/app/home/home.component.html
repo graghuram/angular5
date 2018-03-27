@@ -1,0 +1,14 @@
+<form>
+    <input type="text" name = "cat_nameeee" placeholder="Enter Text..."  [(ngModel)]="cat_name">
+    <input type="submit" ngClick="add_cat()" [value]="add_cat_btn" (click)="add_cat()">
+</form>
+
+<br/>
+
+Total Category : {{ cat_length}}
+
+<ul>
+    <li *ngFor="let cat of categories let i = index" (click)="remove_cat(i)">
+        {{ cat }}
+    </li>
+</ul>
